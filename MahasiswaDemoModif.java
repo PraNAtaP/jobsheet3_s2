@@ -30,5 +30,7 @@ public class MahasiswaDemoModif {
             System.out.println("IPK" + arrayOfMahasiswa[i].ipk);
             System.out.println("-------------------------");
         }
+
+        sc.close();
     }
 }
