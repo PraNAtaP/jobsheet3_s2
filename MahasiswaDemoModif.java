@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class MahasiswaDemoModif {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Mahasiswa[] arrayOfMahasiswa = new Mahasiswa[3];
+        MahasiswaModif[] arrayOfMahasiswa = new MahasiswaModif[3];
         String dummy;
 
         for (int i = 0; i < 3; i++) {
-            arrayOfMahasiswa[i] = new Mahasiswa();
+            arrayOfMahasiswa[i] = new MahasiswaModif();
 
             System.out.println("Masukkan Data Mahasiswa ke-" + (i + 1));
             System.out.print("NIM   : ");
@@ -24,11 +24,7 @@ public class MahasiswaDemoModif {
 
         for (int i = 0; i < 3; i++) {
             System.out.println("Data Mahasiswa ke-" + (i + 1));
-            System.out.println("NIM     : " + arrayOfMahasiswa[i].nim);
-            System.out.println("Nama    : " + arrayOfMahasiswa[i].nama);
-            System.out.println("Kelas   : " + arrayOfMahasiswa[i].kelas);
-            System.out.println("IPK     : " + arrayOfMahasiswa[i].ipk);
-            System.out.println("-------------------------");
+            arrayOfMahasiswa[i].cetakInfo();
         }
 
         sc.close();
