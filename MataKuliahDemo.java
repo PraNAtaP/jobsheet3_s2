@@ -40,5 +40,7 @@ public class MataKuliahDemo {
             arrayOfMataKuliah[i].cetakInfo();
             System.out.println("---------------------------");
         }
+
+        sc.close();
     }
 }
