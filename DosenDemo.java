@@ -9,6 +9,7 @@ public class DosenDemo {
         sc.nextLine();
 
         Dosen[] arrayOfDosen = new Dosen[jumlahDosen];
+        DataDosen dataDosen = new DataDosen();
         String kode, nama;
         int usia;
         boolean jenisKelamin;
@@ -32,17 +33,21 @@ public class DosenDemo {
             System.out.println("-------------------------------------");
         }
 
-        int index = 1;
+        System.out.println("\n==== Data Semua Dosen ====");
+        dataDosen.dataSemuaDosen(arrayOfDosen);
 
-        System.out.println("\n===== DATA DOSEN =====");
-        for (Dosen dosen : arrayOfDosen) {
-            System.out.println("Data Dosen ke-" + index++);
-            System.out.println("Kode            : " + dosen.kode);
-            System.out.println("Nama            : " + dosen.nama);
-            System.out.println("Jenis Kelamin   : " + (dosen.jenisKelamin ? "Laki-laki" : "Perempuan"));
-            System.out.println("Usia            : " + dosen.usia);
-            System.out.println("---------------------");
-        }
+        System.out.println("\n==== Jumlah Dosen Berdasarkan Jenis Kelamin ====");
+        dataDosen.jumlahDosenPerJenisKelamin(arrayOfDosen);
+
+        System.out.println("\n==== Rata-rata Usia Dosen Berdasarkan Jenis Kelamin ====");
+        dataDosen.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
+
+        System.out.println("\n==== Dosen Paling Tua ====");
+        dataDosen.infoDosenPalingTua(arrayOfDosen);
+
+        System.out.println("\n==== Dosen Paling Muda ====");
+        dataDosen.infoDosenPalingMuda(arrayOfDosen);
+
         sc.close();
     }
 }
